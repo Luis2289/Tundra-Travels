@@ -1,0 +1,43 @@
+/* Inicializa todos los elementos de nuestro HTML sin estilo */
+@tailwind base;
+/* Nos permite acceder a nuestras clases */
+@tailwind components;
+/* Agrega todas las utilidades al proyecto y nos permite acceder a ellas */
+@tailwind utilities;
+
+/*Trabajar de manera limpia pero no es la manera de trabajar en Tailwind, por lo que debemos de identificar todos los components y elementos que se repitan para establecerlo como extract component.*/
+.card {
+  /* Agregamos flex-none para que el tamaño de nuestra card no se reduzca con respecto al espaciado que tengan. */
+  @apply w-48 h-80 shadow-md rounded-lg flex-none
+  transform transition-all hover:-translate-y-4 hover:shadow-sm;
+}
+
+/* Sección de rentas destacas TITLOS */
+.cardtitle{
+  @apply  text-4xl px-8 pt-8 pb-2 font-extrabold justify-center text-center text-gray-900;
+}
+
+/* Card Transparente*/
+.transparent{
+  @apply w-80 h-32 ml-5 mt-2;
+  background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) ;
+}
+
+/*Texto del typed js*/
+.textup{
+  @apply text-black font-Montserrat;
+  font-size: 30px;
+  background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) ;
+}

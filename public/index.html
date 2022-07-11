@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/tailwind.css">
+
+    <!-- Googleapis fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Elements CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    <title>Zuniga´s Tour</title>
+</head>
+
+<body class="font-Montserrat dark:bg-gray-900">
+    <!-- Navbar -->
+    <!-- ====================================================================================================================== -->
+    <nav class="
+    dark:bg-gray-900
+  relative
+  w-full
+  items-center
+  justify-between
+  py-4
+  bg-gray-100
+  text-gray-500
+  hover:text-gray-700
+  focus:text-gray-700
+  shadow-xl
+  navbar navbar-expand-lg navbar-light
+  xsm:hidden
+  lg:flex
+
+  ">
+        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+            <button
+                class="navbar-toggler  text-gray-500  border-0   hover:shadow-none hover:no-underline   py-2   px-2.5   bg-transparent   focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline "
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+            </button>
+
+            <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+                <a class="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0  mr-1 lg:ml-5"
+                    href="#home">
+                    <img class="2xl:ml-12" src="./assets/img/Tundra Logo.png" style="height: 80px" alt="Logo"
+                        loading="lazy" />
+                </a>
+                <!-- Left links -->
+                <ul
+                    class="navbar-nav flex flex-col pl-0 list-style-none lg:space-x-2 lg:mx-auto 2xl:space-x-3 2xl:mx-auto 3xl:space-x-3 3xl:mx-auto">
+
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-700 font-bold hover:text-primary focus:text-primary p-0 dark:text-white dark:hover:text-primary dark:duration-200"
+                            href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-700 font-bold hover:text-primary focus:text-primary p-0 dark:text-white dark:hover:text-primary dark:duration-200"
+                            href="#recomendados">Recomments</a>
+                    </li>
+
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-700 font-bold hover:text-primary focus:text-primary p-0  dark:text-white dark:hover:text-primary dark:duration-200"
+                            href="#rentas_destacadas">Trending
+                            places</a>
+                    </li>
+
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-700 font-bold hover:text-primary focus:text-primary p-0 dark:text-white dark:hover:text-primary dark:duration-200"
+                            href="#faqs">FAQS</a>
+                    </li>
+
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-gray-700 font-bold hover:text-primary focus:text-primary p-0 dark:text-white dark:hover:text-primary dark:duration-200"
+                            href="#">About
+                            Us</a>
+                    </li>
+
+                </ul>
+                <!-- Left links -->
+            </div>
+
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="flex items-center relative mt-2">
+                <!-- Icon -->
+                <a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4 dark:text-white dark:hover:text-primary"
+                    href="#">
+                    <button id="toggle">
+                        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                </a>
+
+                <div class="dropdown relative">
+                    <a class="  text-gray-500  hover:text-gray-700    focus:text-gray-700   mr-4        dropdown-toggle         hidden-arrow        flex items-center        dark:text-white       dark:hover:text-primary     "
+                        href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span
+                            class="text-white bg-red-700 absolute rounded-full text-xs -mt-5 ml-4 py-0 px-1.5">1</span>
+                    </a>
+                </div>
+
+                <div class="dropdown relative">
+                    <a class="dropdown-toggle flex items-center hidden-arrow dark:text-white
+                    dark:hover:text-primary" href="#" id="dropdownMenuButton2" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+    </nav>
+    <!-- ====================================================================================================================== -->
+    <!-- Navbar -->
+    <section class="w-full h-auto">
+
+        <!-- Home -->
+        <!-- ====================================================================================================================== -->
+        <!-- In this place we able to see a San Francisco´s bridge and two buttons. -->
+        <div id="home">
+            <div class="w-full h-auto">
+                <div class="w-full h-full flex flex-col absolute space-y-72 py-4 items-center sm:space-y-2">
+
+                    <input type="search"
+                        class="outline-none p-3 rounded-full text-center shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden sm:hidden"
+                        placeholder="Santorini" name="" id="#">
+
+                    <div class="hidden md:flex pb-5">
+                        <p class="textup">Book more places like this in <span class="auto_type text-white"></span></p>
+                    </div>
+
+                    <button
+                        class="w-48 rounded-full text-lg text-primary shadow-sm font-semibold p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110">Take
+                        a tour</button>
+                </div>
+
+                <div
+                    class="w-full sm:h-96 sm:bg-desktop sm:bg-cover sm:bg-center  lg:h-96 lg:bg-desktop lg:bg-cover lg:bg-center">
+
+                    <img class="lg:hidden sm:hidden" src="/public/assets/img/Santoriniwi.jpeg" alt="Santorini">
+
+                </div>
+
+            </div>
+        </div>
+        <!-- ====================================================================================================================== -->
+        <!-- Home -->
+
+
+        <!-- Recomendados -->
+        <!-- ====================================================================================================================== -->
+        <!-- Space where contain our card to be more specific our recommendations CAROUSEL -->
+        <div class="p-6" id="recomendados">
+            <p class="text-3xl font-semibold text-primary">Recomments</p>
+
+            <!-- Container-card Init -->
+            <div
+                class="w-auto h-96 items-center mt-2 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden">
+
+                <!-- Card1-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-victoria bg-cover"></div>
+                    <div class="w-full h-2/5 bg-secundary shadow-xl  rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white font-bold text-xl px-3 py-2 dark:text-white">Victoria Falls</p>
+                        <p class="text-white text-md px-3 dark:text-white">Enjoy this beatiful landscapes.</p>
+                    </div>
+                </div>
+                <!-- Card1-END -->
+
+
+                <!-- Card2-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-maldivas bg-cover"></div>
+                    <div class="w-full h-2/5 bg-white shadow-xl  rounded-b-lg dark:bg-gray-800">
+                        <p class="text-terciary font-bold text-xl px-3 py-2 dark:text-white">Maldivas</p>
+                        <p class="text-terciary text-md px-3 dark:text-white">One of the most beatiful beach in the
+                            world.</p>
+                    </div>
+                </div>
+                <!-- Card2-END -->
+
+
+                <!-- Card3-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-bali bg-cover"></div>
+                    <div class="w-full h-2/5 bg-secundary shadow-xl  rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white font-bold text-xl px-3 py-2 dark:text-white">Bali</p>
+                        <p class="text-white text-md px-3 dark:text-white">Get stunned with wild animals sleeping next
+                            to you.</p>
+                    </div>
+                </div>
+                <!-- Card3-END -->
+
+
+                <!-- Card4-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-chicago bg-cover"></div>
+                    <div class="w-full h-2/5 bg-white shadow-xl  rounded-b-lg dark:bg-gray-800">
+                        <p class="text-terciary font-bold text-xl px-3 py-2 dark:text-white">Chicago</p>
+                        <p class="text-terciary text-md px-3 dark:text-white">The windy city will make you feel in the
+                            sky.</p>
+                    </div>
+                </div>
+                <!-- Card4-END -->
+
+
+                <!-- Card5-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-europe bg-cover"></div>
+                    <div class="w-full h-2/5 bg-secundary shadow-xl  rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white font-bold text-xl px-3 py-2 dark:text-white">Europe</p>
+                        <p class="text-white text-md px-3 dark:text-white">The ancientest structures that exist in the
+                            worldwide.</p>
+                    </div>
+                </div>
+                <!-- Card5-END -->
+
+
+                <!-- Card6-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-maui bg-cover"></div>
+                    <div class="w-full h-2/5 bg-white shadow-xl  rounded-b-lg dark:bg-gray-800">
+                        <p class="text-terciary font-bold text-xl px-3 py-2 dark:text-white">Maui</p>
+                        <p class="text-terciary text-md px-3 dark:text-white">The best sunsets that you have ever seen
+                            before.</p>
+                    </div>
+                </div>
+                <!-- Card6-END -->
+
+                <!-- Card6-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-nicaragua bg-cover"></div>
+                    <div class="w-full h-2/5 bg-secundary  shadow-xl  rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white font-bold text-xl px-3 py-2 dark:text-white">Nicaragua</p>
+                        <p class="text-white text-md px-3 dark:text-white">Enjoy of Latinamerican Nicaragua culture.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card6-END -->
+
+                <!-- Card6-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-LA bg-cover"></div>
+                    <div class="w-full h-2/5 bg-white shadow-xl  rounded-b-lg dark:bg-gray-800">
+                        <p class="text-terciary font-bold text-xl px-3 py-2 dark:text-white">Los Angeles</p>
+                        <p class="text-terciary text-md px-3 dark:text-white">Place of the great movies in the history.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card6-END -->
+
+                <!-- Card6-INIT -->
+                <!-- La clase card se comporta mediante la estracción de componentes. -->
+                <div class="card">
+                    <!-- La clase bg-cover es para que la imagen se ajuste al tamaño del contenedor. -->
+                    <div class="w-full h-3/5 rounded-t-lg bg-newyork bg-cover"></div>
+                    <div class="w-full h-2/5 bg-secundary shadow-xl  rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white font-bold text-xl px-3 py-2 dark:text-white">New York</p>
+                        <p class="text-white text-md px-3 dark:text-white">Stay in the concrete jungle</p>
+                    </div>
+                </div>
+                <!-- Card6-END -->
+
+            </div>
+            <!-- Container-card End -->
+        </div>
+        <!-- ====================================================================================================================== -->
+        <!-- Recomendados -->
+
+        <!-- Rentas Destacadas -->
+        <!-- ====================================================================================================================== -->
+        <div id="rentas_destacadas" class="h-full w-full px-6">
+            <p class="text-3xl text-primary font-semibold pb-6 mt-6">
+                Trending places
+            </p>
+
+            <div
+                class="w-ful h-4/5 grid grid-cols-1 lg:grid-cols-2 lg:place-items-center gap-4 lg:place-content-stretch lg:p-6 ">
+
+                <div
+                    class="relative w-full h-96  rounded-lg overflow-hidden lg:col-span-2 transform transition-all ease-in-out duration-500 hover:-translate-y-4 hover:shadow-sm hover:scale-95">
+                    <img class="object-cover h-full w-full" src="./assets/img/iceland.jpg" alt="iceland" />
+                    <div class="transparent absolute top-0 left-0">
+                        <p class="text-3xl px-8 pt-8 pb-2 font-semibold text-light dark:text-white">Iceland</p>
+                        <p class="text-md font-bold pl-8 text-light mr-24 dark:text-white">
+                            2 rooms, bathroom & kitchen
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative w-full h-96 md:h-full rounded-lg overflow-hidden lg:row-span-2 transform transition-all ease-in-out duration-500 hover:-translate-y-4 hover:shadow-sm hover:scale-95">
+                    <img class="object-cover h-full w-full" src="./assets/img/LA.jpg" alt="" />
+                    <div class="transparent absolute top-0 left-0">
+                        <p class="text-3xl px-8 pt-8 pb-2 font-semibold text-light dark:text-white">Los Angeles</p>
+                        <p class="text-md font-bold pl-8 text-light mr-24 dark:text-white">
+                            2 rooms, bathroom & kitchen
+                        </p>
+                    </div>
+                </div>
+
+
+                <div
+                    class="relative w-full h-96 md:h-full rounded-lg overflow-hidden transform transition-all ease-in-out duration-500 hover:-translate-y-4 hover:shadow-sm hover:scale-95 ">
+                    <img class="object-cover h-full w-full" src="./assets/img/mykonos.jpeg" alt="" />
+                    <div class="transparent absolute top-0 left-0">
+                        <p class="text-3xl px-8 pt-8 pb-2 font-semibold text-light dark:text-white">Mykonos</p>
+                        <p class="text-md font-bold pl-8 text-light mr-24 dark:text-white">
+                            2 rooms, bathroom & kitchen
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative w-full h-96 md:h-full rounded-lg overflow-hidden transform transition-all ease-in-out duration-500 hover:-translate-y-4 hover:shadow-sm hover:scale-95 ">
+                    <img class="object-cover h-full w-full" src="./assets/img/Paris.jpeg" alt="" />
+                    <div class="transparent absolute top-0 left-0">
+                        <p class="text-3xl px-8 pt-8 pb-2 font-semibold text-light dark:text-white">Paris</p>
+                        <p class="text-md font-bold pl-8 text-light mr-24 dark:text-white">
+                            2 rooms, bathroom & kitchen
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <!-- ====================================================================================================================== -->
+        <!-- Rentas Destacadas -->
+
+        <!-- FAQS -->
+        <!-- ====================================================================================================================== -->
+        <div class="px-2 h-auto w-full mt-8 mb-10 lg:p-6" id="faqs">
+
+            <div class="w-full h-full flex flex-col space-x-4">
+                <p class="text-3xl ml-5 text-primary font-semibold">FAQS</p>
+
+                <!-- 1 question -->
+                <div class="mt-4">
+                    <p class="text-xl font-medium text-primary">Billing Politics</p>
+                    <p class="text-justify text-md pt-2 dark:text-white">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nisi
+                        temporibus, nihil sed nemo
+                        eum eaque exercitationem explicabo laborum quaerat odit, error, at adipisci quas beatae deleniti
+                        atque nesciunt hic quidem?</p>
+                </div>
+                <!-- 1 question -->
+
+                <!-- 2 question -->
+                <div class="mt-4">
+                    <p class="text-xl font-medium text-primary">Shipping Politics</p>
+                    <p class="text-justify text-md pt-2 dark:text-white">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nisi
+                        temporibus, nihil sed nemo
+                        eum eaque exercitationem explicabo laborum quaerat odit, error, at adipisci quas beatae deleniti
+                        atque nesciunt hic quidem?</p>
+                </div>
+                <!-- 2 question -->
+
+                <!-- 3 question -->
+                <div class="mt-4">
+                    <p class="text-xl font-medium text-primary">Use Politics</p>
+                    <p class="text-justify text-md pt-2 dark:text-white">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nisi
+                        temporibus, nihil sed nemo
+                        eum eaque exercitationem explicabo laborum quaerat odit, error, at adipisci quas beatae deleniti
+                        atque nesciunt hic quidem?</p>
+                </div>
+                <!-- 3 question -->
+
+                <!-- 4 question -->
+                <div class="mt-4">
+                    <p class="text-xl font-medium text-primary">Cashback Politics</p>
+                    <p class="text-justify text-md pt-2 dark:text-white">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nisi
+                        temporibus, nihil sed nemo
+                        eum eaque exercitationem explicabo laborum quaerat odit, error, at adipisci quas beatae deleniti
+                        atque nesciunt hic quidem?</p>
+                </div>
+                <!-- 4 question -->
+            </div>
+        </div>
+        <!-- ====================================================================================================================== -->
+        <!-- FAQS -->
+    </section>
+
+    <!-- footer -->
+    <!-- ====================================================================================================================== -->
+    <footer class="h-auto w-full bg-gray-100 p-6 space-y-3 lg:mb-0 xsm:mb-14">
+        <p class="text-lg">About Us</p>
+        <p class="text-sm text-gray-300">Investors</p>
+        <p class="text-sm text-gray-300">Jobs</p>
+        <p class="text-sm text-gray-300">Terms & Conditions</p>
+        <p class="text-sm font-semibold text-black-50">Zuniga´s Tour, Inc.</p>
+    </footer>
+    <!-- ====================================================================================================================== -->
+    <!-- footer -->
+
+
+    <!-- TABBAR -->
+    <!-- ====================================================================================================================== -->
+    <div class="w-full h-16 bg-gray-200 opacity-50 fixed left-0 bottom-0 shadow-lg flex space-x-8 items-center justify-center lg:hidden"
+        id="tab_bar">
+        <a href="#home">
+            <div class="hover:text-primary duration-200">
+                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+
+            </div>
+
+        </a>
+
+        <a href="#rentas_destacadas">
+            <div class="hover:text-primary duration-200">
+                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </a>
+
+        <a href="#recomendados">
+            <div class="hover:text-primary duration-200">
+                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </div>
+        </a>
+
+        <button id="toggle-sm">
+            <div class="hover:text-primary duration-200">
+                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </div>
+
+        </button>
+
+        <a href="#">
+            <div class="hover:text-primary">
+                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+            </div>
+
+        </a>
+
+
+
+
+    </div>
+    <!-- ====================================================================================================================== -->
+    <!-- TABBAR -->
+
+    <!-- Tailwind Elements CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <!--Typed effect -->
+    <script src="/public/js/typed.js"></script>
+    <script>
+        var typed = new Typed('.auto_type', {
+            strings: ['Italy',
+                'Greece',
+                'Rome',
+                'Bali',
+                'Finland',
+                'France',
+                'Italy',
+                'Hawai',
+            ],
+
+            typeSpeed: 90,
+            backSpeed: 100,
+            loop: true,
+        });
+    </script>
+
+
+    <!-- Funcionalidad de nuestro botón de DarkMode, solo debemos de mandar a llamar a nuestra id declarado. -->
+    <script>
+        const htmlElement = document.querySelector("html")
+        const toggleButton = document.querySelector("#toggle")
+        const toggleButtonsm = document.querySelector("#toggle-sm")
+
+        toggleButton.addEventListener("click", () => toggleDarkMode())
+        toggleButtonsm.addEventListener("click", () => toggleDarkMode())
+
+        const toggleDarkMode = () => {
+            htmlElement.classList.contains("dark") ?
+                htmlElement.classList.remove("dark") :
+                htmlElement.classList.add("dark")
+        }
+    </script>
+
+</body>
+
+</html>
